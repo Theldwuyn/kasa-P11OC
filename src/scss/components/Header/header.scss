@@ -1,0 +1,47 @@
+.appbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+
+  &__logo {
+    width: 145px;
+    height: 47px;
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+
+    &--link {
+      font-size: 0.75em;
+      text-transform: uppercase;
+    }
+
+    &--link.active {
+      text-decoration: underline;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .appbar {
+    padding: 0 100px;
+    margin: 45px 0;
+    &__logo {
+      width: 210px;
+      height: 68px;
+    }
+
+    &__nav {
+      gap: 40px;
+
+      &--link {
+        font-size: 1.5em;
+        text-transform: none;
+      }
+    }
+  }
+}

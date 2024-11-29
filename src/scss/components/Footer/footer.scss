@@ -1,0 +1,33 @@
+.appfooter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: white;
+  padding: 60px 0;
+  gap: 20px;
+
+  &__logo {
+    width: 122px;
+    height: 39px;
+  }
+
+  &__text {
+    font-size: 0.75em;
+    text-align: center;
+    padding: 0 120px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .appfooter {
+    padding: 60px 0 25px 0;
+    gap: 30px;
+
+    &__text {
+      font-size: 1.5em;
+      padding: 0;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+.logementCard {
+  position: relative;
+  width: 100%;
+  height: 255px;
+  border-radius: 10px;
+  overflow: hidden;
+
+  &__img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__title {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 1.125em;
+    color: white;
+    font-weight: bold;
+    max-width: 40%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .logementCard {
+    width: 100%;
+    height: 340px;
+  }
+}
