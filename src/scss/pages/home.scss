@@ -1,4 +1,4 @@
-@import '../variables.scss';
+@use '../variables' as v;
 
 #logementSection {
   display: flex;
@@ -12,7 +12,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     padding: 50px;
-    background-color: $secondary;
+    background-color: v.$secondary;
     border-radius: 25px;
     margin: 40px 0;
   }
