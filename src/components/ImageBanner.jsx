@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import '../../scss/components/ImageBanner/imageBanner.scss';
+import '../scss/components/imageBanner.scss';
 
 function ImageBanner({ label, picture }) {
   return (

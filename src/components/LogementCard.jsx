@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import '../../scss/components/LogementCard/logementCard.scss';
+import '../scss/components/logementCard.scss';
 
 function LogementCard({ title, picture }) {
   return (
