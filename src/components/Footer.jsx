@@ -1,6 +1,6 @@
-import logo from '../../assets/logo_white.svg';
+import logo from '../assets/logo_white.svg';
 
-import '../../scss/components/Footer/footer.scss';
+import '../scss/components/footer.scss';
 
 function Footer() {
   return (

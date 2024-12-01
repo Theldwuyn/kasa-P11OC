@@ -1,11 +1,11 @@
 import { BrowserRouter, Route, Routes } from 'react-router';
 
-import About from '../../pages/About/About';
-import Logement from '../../pages/Logement/Logement';
-import ErrorPage from '../../pages/errorPage/errorPage';
-import Header from '../Header/Header';
-import Footer from '../Footer/Footer';
-import Home from '../../pages/Home/Home';
+import About from '../pages/About';
+import Logement from '../pages/Logement';
+import ErrorPage from '../pages/errorPage';
+import Header from './Header';
+import Footer from './Footer';
+import Home from '../pages/Home';
 
 function AppRouter() {
   return (

@@ -1,9 +1,9 @@
-import bannerImg from '../../assets/homeBanner.jpg';
-import ImageBanner from '../../components/ImageBanner/ImageBanner';
-import LogementCard from '../../components/LogementCard/LogementCard';
-import logementData from '../../data/logements.json';
+import bannerImg from '../assets/homeBanner.jpg';
+import ImageBanner from '../components/ImageBanner';
+import LogementCard from '../components/LogementCard';
+import logementData from '../data/logements.json';
 import { Link } from 'react-router';
-import '../../scss/pages/home.scss';
+import '../scss/pages/home.scss';
 
 function Home() {
   return (
