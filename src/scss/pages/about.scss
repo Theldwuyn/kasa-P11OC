@@ -1,0 +1,10 @@
+#dropdownSection {
+  margin-top: 20px;
+}
+
+@media (min-width: 1024px) {
+  #dropdownSection {
+    margin-top: 40px;
+    padding: 0 100px;
+  }
+}

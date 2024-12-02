@@ -5,9 +5,10 @@ import LogementCard from '../components/LogementCard';
 import { Link } from 'react-router';
 import '../scss/pages/home.scss';
 import { useFetch } from '../utils/customHooks/useFetch';
+//import data from "../../public/data/"
 
 function Home() {
-  const { data, error } = useFetch();
+  const { data, error } = useFetch('http://localhost:5173/data/logements.json');
 
   if (error) {
     return (
