@@ -1,22 +1,16 @@
 import DropdownWrapper from '../components/dropdown/DropdownWrapper';
 import ImageBanner from '../components/ImageBanner';
-import { useFetch } from '../utils/customHooks/useFetch';
+import data from '../data/apropos.json';
 
 import bannerImg from '../assets/aboutBanner.png';
 import '../scss/pages/about.scss';
 
 function About() {
-  const { data, error } = useFetch('http://localhost:5173/data/apropos.json');
-
-  if (error) {
-    return <p>Oups, un problème est survenu</p>;
-  }
-
   return (
     <main>
       <h1 className="sr-only">À propos</h1>
       <ImageBanner picture={bannerImg} />
-      <section id="dropdownSection">
+      <section id="dropdownSection" data-testid="dropdownSection">
         {data &&
           data.map((elem, index) => (
             <DropdownWrapper

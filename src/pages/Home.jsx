@@ -8,7 +8,7 @@ import { useFetch } from '../utils/customHooks/useFetch';
 //import data from "../../public/data/"
 
 function Home() {
-  const { data, error } = useFetch('http://localhost:5173/data/logements.json');
+  const { data, error } = useFetch('../../data/logements.json');
 
   if (error) {
     return (
