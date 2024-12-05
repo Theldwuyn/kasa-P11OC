@@ -36,11 +36,11 @@ function AppRoutes() {
 
 function AppRouter() {
   return (
-    <div>
+    <>
       <Header />
       <AppRoutes />
       <Footer />
-    </div>
+    </>
   );
 }
 

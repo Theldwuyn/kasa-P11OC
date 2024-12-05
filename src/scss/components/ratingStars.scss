@@ -1,0 +1,30 @@
+@use '../variables.scss' as v;
+
+.starWrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+
+  & span {
+    transform: scale(0.8, 0.8);
+  }
+}
+
+.red-star {
+  color: v.$primary;
+}
+
+.grey-star {
+  color: v.$emptyStar;
+}
+
+@media (min-width: 1024px) {
+  .starWrapper {
+    gap: 15px;
+    padding-bottom: 10px;
+
+    & span {
+      transform: scale(1.5, 1.5);
+    }
+  }
+}
