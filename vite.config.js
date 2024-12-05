@@ -1,4 +1,5 @@
 import { defineConfig } from 'vite';
+import { configDefaults } from 'vitest/config';
 import react from '@vitejs/plugin-react';
 
 // https://vite.dev/config/
@@ -10,7 +11,14 @@ export default defineConfig({
     reporters: ['verbose'],
     watch: false,
     coverage: {
-      include: ['src/__test__/*'],
+      reporter: ['text', 'json', 'html'],
+      exclude: ['./src/main.jsx', ...configDefaults.exclude],
     },
+    exclude: [
+      ...configDefaults.exclude,
+      './src/main.jsx',
+      '**/node_modules/**',
+      './coverage/**',
+    ],
   },
 });
