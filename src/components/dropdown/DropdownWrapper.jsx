@@ -35,6 +35,7 @@ function DropdownWrapper({ label, content }) {
         icon={faChevronUp}
         className={`dropdown__icon ${iconClass}`}
         onClick={toggleShow}
+        title={label}
       />
       <DropdownContent isShown={isShown} content={content} />
     </div>
