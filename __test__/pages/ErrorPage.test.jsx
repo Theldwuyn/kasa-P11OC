@@ -1,5 +1,5 @@
 import { createRoutesStub, MemoryRouter } from 'react-router';
-import ErrorPage from '../../pages/errorPage';
+import ErrorPage from '../../src/pages/errorPage';
 import { render, screen } from '@testing-library/react';
 import { toBeInTheDocument } from '@testing-library/jest-dom/vitest';
 

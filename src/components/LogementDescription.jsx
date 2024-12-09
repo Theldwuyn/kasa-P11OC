@@ -8,7 +8,7 @@ function formatName(name) {
 
 function LogementDescription({ label, location, host, rating, tags }) {
   return (
-    <div className="description">
+    <div className="description" data-testid="main-component">
       <div className="description__logement">
         <h1 className="description__logement--title">{label}</h1>
         <p className="description__logement--location">{location}</p>

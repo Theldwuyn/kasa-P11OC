@@ -1,6 +1,6 @@
 import { screen } from '@testing-library/dom';
 import { render } from '@testing-library/react';
-import Header from '../../components/Header';
+import Header from '../../src/components/Header';
 import { createRoutesStub } from 'react-router';
 
 describe('Given the header component', () => {

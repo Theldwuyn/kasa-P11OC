@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import ImageBanner from '../../components/ImageBanner';
+import ImageBanner from '../../src/components/ImageBanner';
 import { toBeInTheDocument } from '@testing-library/jest-dom/vitest';
 
 describe('Given the ImageBanner component', () => {

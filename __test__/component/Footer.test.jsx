@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react';
-import Footer from '../../components/Footer';
+import Footer from '../../src/components/Footer';
 import { screen } from '@testing-library/react';
 import { toBeInTheDocument } from '@testing-library/jest-dom/vitest';
 

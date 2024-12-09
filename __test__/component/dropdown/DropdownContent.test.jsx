@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import DropdownContent from '../../../components/dropdown/DropdownContent';
+import DropdownContent from '../../../src/components/dropdown/DropdownContent';
 import { toBeInTheDocument } from '@testing-library/jest-dom/vitest';
 
 describe('Given the DropdownContent component', () => {

@@ -1,7 +1,7 @@
 import { render, screen, waitFor } from '@testing-library/react';
 import { setupServer } from 'msw/node';
 import { http, HttpResponse } from 'msw';
-import Home from '../../pages/Home';
+import Home from '../../src/pages/Home';
 import { afterAll, beforeAll, expect, vi } from 'vitest';
 import { BrowserRouter, createRoutesStub } from 'react-router';
 import { toBeInTheDocument } from '@testing-library/jest-dom/vitest';
@@ -21,13 +21,13 @@ const logementMockData = [
 ];
 
 const server = setupServer(
-  http.get('http://localhost:3000/data/logements.json', () => {
+  http.get('../../data/logements.json', () => {
     return HttpResponse.json(logementMockData);
   }),
 );
 
 const serverWithError = setupServer(
-  http.get('http://localhost:3000/data/apropos.json', () => {
+  http.get('../../data/logements.json', () => {
     return new HttpResponse(null, { status: 400 });
   }),
 );
@@ -76,7 +76,12 @@ describe('Given the Home page', () => {
 
 describe('Given the Home page with fail fetch', () => {
   beforeAll(() => {
-    serverWithError.listen({ onUnhandledRequest: 'error' });
+    //serverWithError.listen({ onUnhandledRequest: 'error' });
+    serverWithError.listen({
+      onUnhandledRequest(request) {
+        console.log('Unhandled %s %s', request.method, request.url);
+      },
+    });
   });
   afterEach(() => {
     serverWithError.resetHandlers();

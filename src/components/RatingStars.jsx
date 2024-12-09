@@ -10,7 +10,7 @@ function RatingStars({ rating }) {
   }
 
   return (
-    <div className="starWrapper">
+    <div className="starWrapper" data-testid="stars">
       {stars.map((star, index) => (
         <span key={index}>
           {star === 'redStar' ? (
