@@ -1,10 +1,12 @@
-import { useParams } from 'react-router';
+import { useNavigate, useParams } from 'react-router';
 import { useFetch } from '../utils/customHooks/useFetch';
 import LogementDescription from '../components/LogementDescription';
 import DropdownWrapper from '../components/dropdown/DropdownWrapper';
+import { useEffect } from 'react';
 
 function Logement() {
   const { logementId: queryId } = useParams();
+  let navigate = useNavigate();
   const { data, error } = useFetch('../../data/logements.json');
 
   function filterData(data, id) {
@@ -13,6 +15,12 @@ function Logement() {
   }
 
   const logementData = filterData(data, queryId);
+
+  useEffect(() => {
+    if (data && !logementData) {
+      navigate('/error');
+    }
+  }, [data, logementData, navigate]);
 
   if (error) {
     return <p>Oups! Nous ne parvenons pas à récupérer les données</p>;
@@ -43,8 +51,6 @@ function Logement() {
         </section>
       </main>
     );
-  } else {
-    return <div>AAAA</div>;
   }
 }
 
