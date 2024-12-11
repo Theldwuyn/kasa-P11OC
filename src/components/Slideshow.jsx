@@ -1,3 +1,7 @@
+/* -------------------------------------------------------------------------- */
+/*                                   IMPORT                                   */
+/* -------------------------------------------------------------------------- */
+
 import {
   faChevronLeft,
   faChevronRight,
@@ -5,8 +9,13 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import PropTypes from 'prop-types';
 import { useState } from 'react';
+
+// style
 import '../scss/components/slideshow.scss';
 
+/* -------------------------------------------------------------------------- */
+/*                                  COMPONENT                                 */
+/* -------------------------------------------------------------------------- */
 function Slideshow({ pictures }) {
   const [index, setIndex] = useState(0);
 
@@ -28,6 +37,8 @@ function Slideshow({ pictures }) {
     }
   }
 
+  // If there are several images to display, we need the button to navigate through
+  // but if there is only one image, no need for the carrousel UI to be active
   if (pictures.length > 1) {
     return (
       <div className="slideshow">
@@ -65,6 +76,10 @@ function Slideshow({ pictures }) {
     </div>
   );
 }
+
+/* -------------------------------------------------------------------------- */
+/*                                  PROPTYPE                                  */
+/* -------------------------------------------------------------------------- */
 
 Slideshow.propTypes = {
   pictures: PropTypes.arrayOf(PropTypes.string).isRequired,

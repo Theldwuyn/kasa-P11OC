@@ -1,3 +1,7 @@
+/* -------------------------------------------------------------------------- */
+/*                                   IMPORT                                   */
+/* -------------------------------------------------------------------------- */
+
 import { Link, Route, Routes } from 'react-router';
 
 import About from '../pages/About';
@@ -6,6 +10,10 @@ import ErrorPage from '../pages/errorPage';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Home from '../pages/Home';
+
+/* -------------------------------------------------------------------------- */
+/*                                  COMPONENT                                 */
+/* -------------------------------------------------------------------------- */
 
 function AppRoutes() {
   if (import.meta.env.MODE === 'test') {
@@ -33,6 +41,10 @@ function AppRoutes() {
     );
   }
 }
+
+/* -------------------------------------------------------------------------- */
+/*                               MAIN COMPONENT                               */
+/* -------------------------------------------------------------------------- */
 
 function AppRouter() {
   return (

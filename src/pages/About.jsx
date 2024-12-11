@@ -1,9 +1,18 @@
+/* -------------------------------------------------------------------------- */
+/*                                   IMPORT                                   */
+/* -------------------------------------------------------------------------- */
+
 import DropdownWrapper from '../components/dropdown/DropdownWrapper';
 import ImageBanner from '../components/ImageBanner';
 import data from '../data/apropos.json';
-
 import bannerImg from '../assets/aboutBanner.png';
+
+// style
 import '../scss/pages/about.scss';
+
+/* -------------------------------------------------------------------------- */
+/*                                  COMPONENT                                 */
+/* -------------------------------------------------------------------------- */
 
 function About() {
   return (

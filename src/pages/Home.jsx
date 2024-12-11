@@ -1,11 +1,19 @@
+/* -------------------------------------------------------------------------- */
+/*                                   IMPORT                                   */
+/* -------------------------------------------------------------------------- */
+
 import bannerImg from '../assets/homeBanner.jpg';
 import ImageBanner from '../components/ImageBanner';
 import LogementCard from '../components/LogementCard';
-//import logementData from '../data/logements.json';
 import { Link } from 'react-router';
-import '../scss/pages/home.scss';
 import { useFetch } from '../utils/customHooks/useFetch';
-//import data from "../../public/data/"
+
+// style
+import '../scss/pages/home.scss';
+
+/* -------------------------------------------------------------------------- */
+/*                                  COMPONENT                                 */
+/* -------------------------------------------------------------------------- */
 
 function Home() {
   const { data, error } = useFetch('../../data/logements.json');

@@ -1,11 +1,24 @@
+/* -------------------------------------------------------------------------- */
+/*                                   IMPORT                                   */
+/* -------------------------------------------------------------------------- */
+
 import PropTypes from 'prop-types';
 import RatingStars from './RatingStars';
+
+// style
 import '../scss/components/logementDescription.scss';
+
+/* -------------------------------------------------------------------------- */
+/*                                  FUNCTION                                  */
+/* -------------------------------------------------------------------------- */
 
 function formatName(name) {
   return name.split(' ');
 }
 
+/* -------------------------------------------------------------------------- */
+/*                                  COMPONENT                                 */
+/* -------------------------------------------------------------------------- */
 function LogementDescription({ label, location, host, rating, tags }) {
   return (
     <div className="description" data-testid="main-component">
@@ -38,6 +51,10 @@ function LogementDescription({ label, location, host, rating, tags }) {
     </div>
   );
 }
+
+/* -------------------------------------------------------------------------- */
+/*                                  PROPTYPE                                  */
+/* -------------------------------------------------------------------------- */
 
 LogementDescription.propTypes = {
   label: PropTypes.string.isRequired,

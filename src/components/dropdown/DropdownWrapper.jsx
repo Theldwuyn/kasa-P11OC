@@ -10,6 +10,7 @@ import { useState } from 'react';
 
 import DropdownContent from './DropdownContent';
 
+// style
 import '../../scss/components/dropdown.scss';
 
 /* -------------------------------------------------------------------------- */

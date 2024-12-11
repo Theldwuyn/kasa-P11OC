@@ -5,6 +5,8 @@
 import PropTypes from 'prop-types';
 import { useRef, useState, useEffect } from 'react';
 
+// no need for stylesheet import as it comes from the parent component DropdownWrapper
+
 /* -------------------------------------------------------------------------- */
 /*                                  COMPONENT                                 */
 /* -------------------------------------------------------------------------- */
@@ -18,7 +20,8 @@ function DropdownContent({ isShown, content }) {
   // needed for the css transition
   useEffect(() => {
     // +5 come from the wrapping div with an absolute position top: -5px
-    // ensure the same padding value around the text
+    // ensure the same visual padding around the text
+    // ref is the content, <p> or <ul>, we need this height for the animation
     const height = ref.current.offsetHeight + 5;
     ref.current.parentElement.style.setProperty('--height', `${height}px`);
 

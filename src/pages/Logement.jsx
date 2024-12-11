@@ -1,9 +1,17 @@
+/* -------------------------------------------------------------------------- */
+/*                                   IMPORT                                   */
+/* -------------------------------------------------------------------------- */
+
 import { useNavigate, useParams } from 'react-router';
 import { useFetch } from '../utils/customHooks/useFetch';
 import LogementDescription from '../components/LogementDescription';
 import DropdownWrapper from '../components/dropdown/DropdownWrapper';
 import { useEffect } from 'react';
 import Slideshow from '../components/Slideshow';
+
+/* -------------------------------------------------------------------------- */
+/*                                  COMPONENT                                 */
+/* -------------------------------------------------------------------------- */
 
 function Logement() {
   const { logementId: queryId } = useParams();
