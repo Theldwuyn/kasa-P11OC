@@ -6,6 +6,9 @@
   overflow: hidden;
 
   &__img {
+    //avoid pixelated image when resized
+    overflow-clip-margin: unset;
+
     object-fit: cover;
     width: 100%;
     height: 100%;

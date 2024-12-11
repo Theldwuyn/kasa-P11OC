@@ -3,21 +3,22 @@
 .description {
   display: flex;
   flex-direction: column;
+  font-weight: 500;
 
   &__logement {
     display: flex;
     flex-direction: column;
-    gap: 10px;
     margin-bottom: 15px;
 
     &--title {
       font-size: 1.125em;
       color: v.$primary;
-      font-weight: normal;
+      font-weight: inherit;
     }
 
     &--location {
       font-size: 0.875em;
+      padding: 8px 0 10px 0;
     }
 
     &--tag {
@@ -25,6 +26,7 @@
       flex-direction: row;
       flex-wrap: wrap;
       gap: 10px;
+      font-weight: bold;
 
       &--item {
         padding: 2px 20px;
@@ -76,14 +78,13 @@
     margin-bottom: 10px;
 
     &__logement {
-      gap: 15px;
-
       &--title {
         font-size: 2.25em;
       }
 
       &--location {
         font-size: 1.125em;
+        padding: 5px 0 20px 0;
       }
 
       &--tag {
@@ -101,7 +102,6 @@
 
       &--name {
         font-size: 1.125em;
-        font-weight: normal;
       }
 
       &--picture {
