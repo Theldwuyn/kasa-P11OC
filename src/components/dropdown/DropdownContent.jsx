@@ -4,6 +4,7 @@
 
 import PropTypes from 'prop-types';
 import { useRef, useState, useEffect } from 'react';
+import useWindowWidth from '../../utils/customHooks/useWindowWidth';
 
 // no need for stylesheet import as it comes from the parent component DropdownWrapper
 
@@ -15,9 +16,10 @@ function DropdownContent({ isShown, content }) {
   const [renderClass, setClass] = useState('');
   const ref = useRef(null);
   const contentClass = isShown ? 'show' : '';
+  const width = useWindowWidth();
 
-  // useEffect triggered once when component render to set the height css property
-  // needed for the css transition
+  // useEffect triggered each time the window size change to set the height css
+  // property needed for the css transition
   useEffect(() => {
     // +5 come from the wrapping div with an absolute position top: -5px
     // ensure the same visual padding around the text
@@ -29,7 +31,7 @@ function DropdownContent({ isShown, content }) {
     // if the class is set before useEffect call, the height will be 0, then the
     // transition don't work
     setClass('rendered');
-  }, []);
+  }, [width]);
 
   if (Array.isArray(content)) {
     return (
