@@ -1,6 +1,15 @@
+/* -------------------------------------------------------------------------- */
+/*                                   IMPORT                                   */
+/* -------------------------------------------------------------------------- */
+
 import PropTypes from 'prop-types';
+
+// style
 import '../scss/components/logementCard.scss';
 
+/* -------------------------------------------------------------------------- */
+/*                                  COMPONENT                                 */
+/* -------------------------------------------------------------------------- */
 function LogementCard({ title, picture }) {
   return (
     <article className="logementCard">
@@ -9,6 +18,10 @@ function LogementCard({ title, picture }) {
     </article>
   );
 }
+
+/* -------------------------------------------------------------------------- */
+/*                                  PROPTYPE                                  */
+/* -------------------------------------------------------------------------- */
 
 LogementCard.propTypes = {
   title: PropTypes.string.isRequired,

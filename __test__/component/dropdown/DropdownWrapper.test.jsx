@@ -1,5 +1,5 @@
 import { fireEvent, render, screen } from '@testing-library/react';
-import DropdownWrapper from '../../../components/dropdown/DropdownWrapper';
+import DropdownWrapper from '../../../src/components/dropdown/DropdownWrapper';
 import { beforeEach } from 'vitest';
 import { toBeInTheDocument } from '@testing-library/jest-dom/vitest';
 

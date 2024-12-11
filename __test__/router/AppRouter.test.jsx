@@ -1,5 +1,5 @@
 import { fireEvent, render, screen } from '@testing-library/react';
-import AppRouter from '../../router/AppRouter';
+import AppRouter from '../../src/router/AppRouter';
 import { toBeInTheDocument } from '@testing-library/jest-dom/vitest';
 import { beforeEach } from 'vitest';
 import { BrowserRouter, MemoryRouter } from 'react-router';

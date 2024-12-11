@@ -12,7 +12,7 @@ export default defineConfig({
     watch: false,
     coverage: {
       reporter: ['text', 'json', 'html'],
-      exclude: ['./src/main.jsx', ...configDefaults.exclude],
+      exclude: ['./src/main.jsx', '__test__/**', ...configDefaults.exclude],
     },
     exclude: [
       ...configDefaults.exclude,

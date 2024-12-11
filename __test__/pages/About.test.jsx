@@ -1,5 +1,5 @@
 import { createRoutesStub } from 'react-router';
-import About from '../../pages/About';
+import About from '../../src/pages/About';
 import { screen, render } from '@testing-library/react';
 import { toBeInTheDocument } from '@testing-library/jest-dom/vitest';
 

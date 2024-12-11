@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import LogementCard from '../../components/LogementCard.jsx';
+import LogementCard from '../../src/components/LogementCard.jsx';
 import { toBeInTheDocument } from '@testing-library/jest-dom/vitest';
 
 describe('Given the LogementCard component', () => {
