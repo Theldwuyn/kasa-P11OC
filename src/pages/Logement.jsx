@@ -3,6 +3,7 @@ import { useFetch } from '../utils/customHooks/useFetch';
 import LogementDescription from '../components/LogementDescription';
 import DropdownWrapper from '../components/dropdown/DropdownWrapper';
 import { useEffect } from 'react';
+import Slideshow from '../components/Slideshow';
 
 function Logement() {
   const { logementId: queryId } = useParams();
@@ -29,7 +30,7 @@ function Logement() {
   if (logementData) {
     return (
       <main>
-        <div>Caroussel</div>
+        <Slideshow pictures={logementData.pictures} />
         <section>
           <LogementDescription
             label={logementData.title}
